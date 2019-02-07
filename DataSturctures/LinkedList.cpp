@@ -128,4 +128,7 @@ void LinkedList::dispaly() const
 	}
 }
 
-LinkedList::~LinkedList() {}
+LinkedList::~LinkedList() {
+	delete head;
+	delete tail;
+}

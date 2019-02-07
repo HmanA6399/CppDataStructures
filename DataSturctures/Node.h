@@ -16,5 +16,8 @@ public:
 	int getKey() const {
 		return this->key;
 	};
-	~Node() {};
+	~Node() {
+		delete next;
+		delete prev;
+	};
 };
