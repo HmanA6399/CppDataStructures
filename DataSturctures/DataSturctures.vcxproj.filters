@@ -33,21 +33,15 @@
     <ClInclude Include="ArrayQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LLQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ArrayStack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LLStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
