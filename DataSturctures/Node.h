@@ -17,8 +17,11 @@ public:
 	T getKey() const {
 		return T(this->key);
 	};
+	void setKey(T val) {
+		this->key = val;
+	};
 	~Node() {
-		delete next;
-		delete prev;
+	//	delete next;
+	//	delete prev;
 	};
 };

@@ -38,7 +38,7 @@ inline T LLQueue<T>::Dequeue()
 {
 	T t = list->TopBack()->getKey();
 	list->PopBack();
-	return T();
+	return T(t);
 }
 
 template<typename T>
