@@ -12,6 +12,7 @@ public:
 	T Get(int) const;
 	void Set(int, T);
 	void PushBack(T);
+	T PopBack();
 	void Remove(int);
 	void Display() const;
 	~DynArray<T>();
@@ -46,14 +47,14 @@ inline int DynArray<T>::Size() const
 template<typename T>
 inline T DynArray<T>::Get(int i) const
 {
-	if (i < 0 || i >= size) throw 0;
+	if (i < 0 || i >= size) throw (std::string)"Out Of Range";
 	return arr_ptr[i];
 }
 
 template<typename T>
 inline void DynArray<T>::Set(int i, T val)
 {
-	if (i < 0 || i >= size) throw 0;
+	if (i < 0 || i >= size) throw (std::string)"Out Of Range";
 	this->arr_ptr[i] = val;
 }
 
@@ -70,11 +71,21 @@ inline void DynArray<T>::PushBack(T val)
 }
 
 template<typename T>
+inline T DynArray<T>::PopBack()
+{
+	if (size == 0) throw (std::string)"Empty Array";
+	return arr_ptr[--size];
+}
+
+template<typename T>
 inline void DynArray<T>::Remove(int i)
 {
-	if (i < 0 || i >= size) throw 0;
-	for (int j = i; j < size - 1; ++j) arr_ptr[j] = arr_ptr[j + 1];
-	--size;
+	if (i < 0 || i >= size)
+		throw (std::string) "Out Of Range";
+	else {
+		for (int j = i; j < size - 1; ++j) arr_ptr[j] = arr_ptr[j + 1];
+		--size;
+	}
 }
 
 template<typename T>
