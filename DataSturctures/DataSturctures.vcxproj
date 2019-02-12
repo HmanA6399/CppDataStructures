@@ -159,6 +159,7 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Tree.h" />
+    <ClInclude Include="DynArray.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
